@@ -15,20 +15,21 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version metadata for the local_bcn_historic_mdc plugin.
+ * Task schedule configuration for the local_bcn_historic_mdc plugin.
  *
  * @package   local_bcn_historic_mdc
  * @copyright 2023, Cristóbal Latorre <clatorre@bcnschool.cl>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
-$plugin->component = 'local_bcn_historic_mdc';
-$plugin->version = 2023112001;
-$plugin->requires = 2018120309.00;
-// $plugin->supported = TODO;   // Available as of Moodle 3.9.0 or later.
-// $plugin->incompatible = TODO;   // Available as of Moodle 3.9.0 or later.
-// $plugin->component = 'TODO_FRANKENSTYLE';
-// $plugin->maturity = MATURITY_STABLE;
-// $plugin->release = 'TODO';
+$tasks = [
+    [
+        'classname' => 'local_bcn_historic_mdc\task\cron_task',
+        'blocking' => 0,
+        'minute' => '*',
+        'hour' => '*',
+        'day' => '*',
+        'month' => '*',
+        'dayofweek' => '*',
+    ],
+];

@@ -15,20 +15,29 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version metadata for the local_bcn_historic_mdc plugin.
+ * Plugin capabilities for the local_bcn_historic_mdc plugin.
  *
  * @package   local_bcn_historic_mdc
  * @copyright 2023, Cristóbal Latorre <clatorre@bcnschool.cl>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
-$plugin->component = 'local_bcn_historic_mdc';
-$plugin->version = 2023112001;
-$plugin->requires = 2018120309.00;
-// $plugin->supported = TODO;   // Available as of Moodle 3.9.0 or later.
-// $plugin->incompatible = TODO;   // Available as of Moodle 3.9.0 or later.
-// $plugin->component = 'TODO_FRANKENSTYLE';
-// $plugin->maturity = MATURITY_STABLE;
-// $plugin->release = 'TODO';
+$capabilities = [
+    // Ability to use the plugin.
+    'local/bcn_historic_mdc:can_write' => [
+        'riskbitmask' => RISK_XSS,
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes' => [
+            'user' => CAP_ALLOW
+        ],
+    ],
+    'local/bcn_historic_mdc:can_read' => [
+        'riskbitmask' => RISK_XSS,
+        'captype' => 'read',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes' => [
+            'user' => CAP_ALLOW
+        ],
+    ],
+];
