@@ -8,6 +8,6 @@ class cron_task extends \core\task\scheduled_task
     }
 
     public function execute() {
-        echo get_name();
+        mtrace($this->get_name());
     }
 }

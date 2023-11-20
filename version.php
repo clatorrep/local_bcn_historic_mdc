@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_bcn_historic_mdc';
-$plugin->version = 2023112001;
+$plugin->version = 2023112002;
 $plugin->requires = 2018120309.00;
 // $plugin->supported = TODO;   // Available as of Moodle 3.9.0 or later.
 // $plugin->incompatible = TODO;   // Available as of Moodle 3.9.0 or later.
