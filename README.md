@@ -1,2 +1,2 @@
 # local_bcn_historic_mdc
-Plugin de moodle del tipo local para crear un cron de guardar los históricos de los cursos pertenecientes a MDC
+Moodle's local plugin for a scheduled task to save historic info from the MDC courses report.
