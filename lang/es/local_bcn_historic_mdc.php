@@ -23,3 +23,5 @@
  */
 
 $string['pluginname'] = 'Histórico MDC';
+
+$string['savedrecords'] = 'Registros guardados';

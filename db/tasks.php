@@ -26,8 +26,8 @@ $tasks = [
     [
         'classname' => 'local_bcn_historic_mdc\task\cron_task',
         'blocking' => 0,
-        'minute' => '*',
-        'hour' => '*',
+        'minute' => '0',
+        'hour' => '0',
         'day' => '*',
         'month' => '*',
         'dayofweek' => '*',
